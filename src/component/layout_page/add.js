@@ -22,6 +22,7 @@ function Add({match,history}) {
         
     const onChange = (event) => {
         var target = event.target;
+        
         var name = target.name;
         var type = target.type;
         var value = target.value;
@@ -41,6 +42,7 @@ function Add({match,history}) {
 
     const onSave = (e) => {
         e.preventDefault();
+        
         var { name, price, image, name_category, color, material
             , expiry_date, origin, description, tinhtranghang } = product;
         

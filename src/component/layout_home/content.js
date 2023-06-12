@@ -1,9 +1,10 @@
 import React, {Component,useEffect, useState} from 'react';									
 import axios from 'axios';	
 import ShowCard from './showCard';
+import Slider from './slider';
 
 
-function Content() {
+function Content() {        
     const [product, setProduct] = useState([]);											
         
     useEffect(()=>{
@@ -23,6 +24,7 @@ function Content() {
 
         return (
             <div>
+                <Slider/>
                 <div className="container">
                 <div id="content" className="space-top-none">
                     <div className="main-content">
@@ -39,7 +41,7 @@ function Content() {
                             {
                                 product.map(data =>
                                     <ShowCard
-                                
+                                        id={data.id}
                                         name={data.name}
                                         price = {data.price}
                                         image = {data.image}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function ShowCard (props) {
-    const { name, price, image} = props;
+    const { id ,name, price, image} = props;
         return (
                 <div className="col-sm-3">
                 <div className="single-item">
@@ -16,7 +17,7 @@ function ShowCard (props) {
                   </div>
                   <div className="single-item-caption">
                     <a className="add-to-cart pull-left" href="shopping_cart.html"><i className="fa fa-shopping-cart" /></a>
-                    <a className="beta-btn primary" href="product.html">Details <i className="fa fa-chevron-right" /></a>
+                    <NavLink className="beta-btn primary" to={`/details/${id}`} > Details <i className="fa fa-chevron-right" /></NavLink>
                     <div className="clearfix" />
                   </div>
                 </div>

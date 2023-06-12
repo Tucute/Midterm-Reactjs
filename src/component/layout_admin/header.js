@@ -37,12 +37,12 @@ class Header extends Component {
                         </Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link text-white " href="add-item.php">
+                        <Link to="/user" className="nav-link text-white" >
                             <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i className="material-icons opacity-10">table_view</i>
                             </div>
-                            <span className="nav-link-text ms-1">Employee</span>
-                        </a>
+                            <span className="nav-link-text ms-1">User</span>
+                        </Link>
                         </li>
                         <li className="nav-item">
                         <a className="nav-link text-white " href="quanlyOrder.php">
