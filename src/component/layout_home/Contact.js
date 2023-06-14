@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Row, Col } from 'react-bootstrap';
-import { contactConfig } from './content_option';
+import { contactConfig } from './content-option';
 
 export default function Contact() {
     const [name, setName] = useState('');

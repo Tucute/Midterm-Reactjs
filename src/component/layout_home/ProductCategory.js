@@ -64,7 +64,7 @@ function ProductCategory() {
                   <div className="row">
                     {filteredProducts.map((data) => (
                       <ShowCard
-                        key={data.id}
+                        id={data.id}
                         name={data.name}
                         price={data.price}
                         image={"../" + data.image}

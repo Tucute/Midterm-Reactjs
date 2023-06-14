@@ -1,16 +1,19 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Outlet, Link, NavLink } from "react-router-dom";
 import axios from 'axios';
-
-// import React, { useState, useEffect } from 'react';
-// import React, { useContext } from 'react';
-// import { AuthContext } from '../layout_page/AuthContext';
 import Category from './Category';
 
 function Header() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [userName, setUserName] = useState('');
+  const [searchitems, setSearchitems] = useState('');
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    localStorage.setItem('searchitems', searchitems);
+    window.location.href = '/Searchitems';
+  };
 
 
   useEffect(() => {
@@ -60,8 +63,8 @@ function Header() {
             <div className="container">
               <div className="pull-left auto-width-left">
                 <ul className="top-menu menu-beta l-inline">
-                  <li><a href><i className="fa fa-home" /> 90-92 Lê Thị Riêng, Bến Thành, Quận 1</a></li>
-                  <li><a href><i className="fa fa-phone" /> 0163 296 7751</a></li>
+                  <li><a href><i className="fa fa-home" /> 101B, Lê Hữu Trác, Phước Mỹ, Sơn Trà, Đà Nẵng</a></li>
+                  <li><a href><i className="fa fa-phone" /> 0988 776 334</a></li>
                 </ul>
               </div>
               <div className="pull-right auto-width-right">
@@ -99,15 +102,20 @@ function Header() {
           <div className="header-body">
             <div className="container beta-relative">
               <div className="pull-left">
-                <a href="index.html" id="logo"><img src="assets/dest/images/logo-cake.png" width="200px" alt /></a>
+                <a href="index.html" id="logo"><img src="assets/dest/images/logo-dep.png" width="200px" alt /></a>
               </div>
               <div className="pull-right beta-components space-left ov">
                 <div className="space10">&nbsp;</div>
                 <div className="beta-comp">
-                  <form role="search" method="get" id="searchform" action="/">
-                    <input type="text" defaultValue name="s" id="s" placeholder="Nhập từ khóa..." />
-                    
-                    <button className="fa fa-search" type="submit" id="searchsubmit" />
+                  <form role="search" method="get" id="searchform" onSubmit={handleSearch}>
+                    <input
+                      type="text"
+                      className='form-control'
+                      value={searchitems}
+                      onChange={(e) => setSearchitems(e.target.value)}
+                      placeholder="Nhập từ khóa..."
+                    />
+                    <button className="fa fa-search" type='submit' id="searchsubmit" />
                   </form>
                 </div>
                 <div className="beta-comp">
@@ -159,7 +167,7 @@ function Header() {
               <div className="clearfix" />
             </div> {/* .container */}
           </div> {/* .header-body */}
-          <div className="header-bottom" style={{ backgroundColor: '#0277b8' }}>
+          <div className="header-bottom" style={{ backgroundColor:'darkred'}}>
             <div className="container">
               <a className="visible-xs beta-menu-toggle pull-right" href="#"><span className="beta-menu-toggle-text">Menu</span> <i className="fa fa-bars" /></a>
               <div className="visible-xs clearfix" />
@@ -177,7 +185,7 @@ function Header() {
                     </ul>
                   </li>
                   <li><a href="about.html">Giới thiệu</a></li>
-                  <li><a href="contacts.html">Liên hệ</a></li>
+                  <li><NavLink to='/Contact'>Liên hệ</NavLink></li>
                 </ul>
                 <div className="clearfix" />
               </nav>

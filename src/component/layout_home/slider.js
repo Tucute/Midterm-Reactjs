@@ -1,51 +1,49 @@
-import React, { Component } from 'react';
 
-class Slider extends Component {
-    render() {
-        return (
-            <div>
-                <div className="rev-slider">
-  <div className="fullwidthbanner-container">
-    <div className="fullwidthbanner">
-      <div className="bannercontainer">
-        <div className="banner">
-          <ul>
-            {/* THE FIRST SLIDE */}
-            <li data-transition="boxfade" data-slotamount={20} className="active-revslide" style={{width: '100%', height: '100%', overflow: 'hidden', zIndex: 18, visibility: 'hidden', opacity: 0}}>
-              <div className="slotholder" style={{width: '100%', height: '100%'}} data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-                <div className="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style={{backgroundColor: 'rgba(0, 0, 0, 0)', backgroundRepeat: 'no-repeat', backgroundImage: 'url("assets/dest/images/thumbs/1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center center', width: '100%', height: '100%', opacity: 1, visibility: 'inherit'}}>
-                </div>
+function Slider() {
+    return (
+      <div>
+        <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
+          <div className="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={0} className="active" aria-current="true" aria-label="Slide 1" />
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={1} aria-label="Slide 2" />
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to={2} aria-label="Slide 3" />
+          </div>
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src="assets/dest/images/slider/slider1.webp" className="d-block w-100" alt="" />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
               </div>
-            </li>
-            <li data-transition="boxfade" data-slotamount={20} className="active-revslide" style={{width: '100%', height: '100%', overflow: 'hidden', zIndex: 18, visibility: 'hidden', opacity: 0}}>
-              <div className="slotholder" style={{width: '100%', height: '100%'}} data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-                <div className="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style={{backgroundColor: 'rgba(0, 0, 0, 0)', backgroundRepeat: 'no-repeat', backgroundImage: 'url("assets/dest/images/thumbs/1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center center', width: '100%', height: '100%', opacity: 1, visibility: 'inherit'}}>
-                </div>
-              </div>
-            </li><li data-transition="boxfade" data-slotamount={20} className="active-revslide" style={{width: '100%', height: '100%', overflow: 'hidden', zIndex: 18, visibility: 'hidden', opacity: 0}}>
-              <div className="slotholder" style={{width: '100%', height: '100%'}} data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-                <div className="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style={{backgroundColor: 'rgba(0, 0, 0, 0)', backgroundRepeat: 'no-repeat', backgroundImage: 'url("assets/dest/images/thumbs/1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center center', width: '100%', height: '100%', opacity: 1, visibility: 'inherit'}}>
-                </div>
-              </div>
-            </li>
-            <li data-transition="boxfade" data-slotamount={20} className="active-revslide current-sr-slide-visible" style={{width: '100%', height: '100%', overflow: 'hidden', visibility: 'inherit', opacity: 1, zIndex: 20}}>
-              <div className="slotholder" style={{width: '100%', height: '100%'}} data-duration="undefined" data-zoomstart="undefined" data-zoomend="undefined" data-rotationstart="undefined" data-rotationend="undefined" data-ease="undefined" data-bgpositionend="undefined" data-bgposition="undefined" data-kenburns="undefined" data-easeme="undefined" data-bgfit="undefined" data-bgfitend="undefined" data-owidth="undefined" data-oheight="undefined">
-                <div className="tp-bgimg defaultimg" data-lazyload="undefined" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat" data-lazydone="undefined" src="assets/dest/images/thumbs/1.jpg" data-src="assets/dest/images/thumbs/1.jpg" style={{backgroundColor: 'rgba(0, 0, 0, 0)', backgroundRepeat: 'no-repeat', backgroundImage: 'url("assets/dest/images/thumbs/1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center center', width: '100%', height: '100%', opacity: 1, visibility: 'inherit'}}>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="tp-bannertimer" />
-    </div>
-  </div>
-  {/*slider*/}
-</div>
-
             </div>
-        );
-    }
-}
+            <div className="carousel-item">
+              <img src="assets/dest/images/slider/slider2.webp" className="d-block w-100" alt="" />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img src="assets/dest/images/slider/slider3.webp" className="d-block w-100" alt="" />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+
+
+      </div>
+    );
+  }
 
 export default Slider;
